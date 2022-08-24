@@ -1,0 +1,555 @@
+/* Google Fonts Setup Start Here  */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+/* Google Fonts Setup End Here  */
+
+/* Universal Setup Start Here  */
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font:'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color:#252525;
+    --secondary-font-color:#c59d5f;
+    --body-font-color:#515151;
+
+}
+body{
+    overflow-x: hidden;
+}
+html{
+    font-family:var(--body-font);
+    color:var(--body-font-color);
+    font-size:10px;
+    scroll-behavior: smooth;
+}
+section{
+    padding:3.9rem 0;
+}
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+}
+p{
+    font-size:1.6rem;
+}
+img{
+    width:100%;
+    max-width:100%;
+}
+.container{
+    width:100%;
+    max-width:122.5rem;
+    margin:0 auto;
+    padding:0 2.4rem;
+}
+/* Universal Setup End Here  */
+/* Header area start here  */
+header{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0.4),transparent);
+}
+nav{
+    height:7.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+nav .menu-toggle .fa-bars{
+    color:white;
+    font-size:2.6rem;
+    display:none;
+    cursor:pointer;
+}
+.nav-list{
+    display:flex;
+    flex-direction:row;
+}
+.nav-list .nav-link{
+    margin:0 2rem;
+    position:relative;
+}
+.nav-link::before{
+    position:absolute;
+    content: "";
+    width:0;
+    height:2px;
+    background:var(--secondary-font-color);
+    left:0;
+    bottom:-0.6rem;
+    transition: 0.3s all;
+}
+.nav-link:hover::before{
+    width:100%;
+}
+.nav-item{
+    color:white;
+    font-size:1.6rem;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-weight:300;
+    letter-spacing: 1px;
+}
+.logo img{
+    max-width:100%;
+    width:13rem;
+    background:#eee;
+    border-radius:.1rem;
+    padding:5px 10px;
+}
+/* Header area end here */
+/* Hero area start here  */
+.hero{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(to left bottom,rgba(0,0,0,0.1),rgba(0,0,0,1)), url(img/hero.jpg) center no-repeat;
+    background-size:cover;
+    display:flex;
+    align-items: center;
+    text-align: center;
+
+}
+.sub-headline{
+    font-size:8rem;
+    font-family:var(--secondary-font);
+    color:var(--secondary-font-color);
+    font-weight:100;
+    line-height:.4;
+    letter-spacing:2px;
+    opacity:0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+}
+.first-letter{
+    text-transform: uppercase;
+    font-size:10.3rem;
+}
+.headline{
+    color:#fff;
+    font-size:3.7rem;
+    text-transform: uppercase;
+    font-weight:900;
+    font-family: var(--main-font);
+    letter-spacing: .5rem;
+    margin-right:-.5rem;
+    animation: scale .7s forwards;
+    animation-delay: .5s;
+}
+.single-animation{
+    animation: fadeDown .8s forwards;
+    animation-delay: .5s;
+}
+.separator{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width:100%;
+    max-width:8.4rem;
+    height:.3rem;
+    background:white;
+    position:relative;
+    opacity: 0;
+    animation:grow 3s forwards;
+    animation-delay: .9s;
+}
+.line-left::before,
+.line-right::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    border:.7rem solid transparent;
+    transform: translateY(-50%);
+    animation:grow 5s forwards;
+    animation-delay: 1.2s;
+}
+.line-left::before{
+    border-left-color:white;
+    left:0;
+}
+.line-right::before{
+    border-right-color:white;
+    right:0;
+}
+.fa-asterisk{
+    font-size:1.2rem;
+    color:white;
+    margin:0 1.6rem;
+    animation: spin .4s forwards;
+    animation-delay: .7s;
+}
+.headline-description h5{
+    font-size:1.4rem;
+    color:white;
+    font-weight:100;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    margin-right:-3px;
+}
+.headline-dark{
+    color:white;
+}
+.btn{
+    display:inline-block;
+    letter-spacing: 3px;
+    margin-right:-3px;
+
+}
+.cta-btn{
+    font-size:1.6rem;
+    background:white;
+    padding:.9rem 1.7rem;
+    color:var(--body-font-color);
+    margin-top:.8rem;
+    border-radius:.2rem;
+    text-transform: uppercase;
+    transition: 0.3s all;
+}
+.cta-btn:hover{
+    color:white;
+    background: var(--secondary-font-color);
+}
+.round{
+    width:40rem;
+    height:40rem;
+    background:radial-gradient(rgb(197, 157, 95,0.3),rgba(0,0,0,0.02),rgba(0,0,0,0.06));
+    border-radius:50%;
+    position:absolute;
+    bottom:0;
+    transform: translateX(-50%);
+}
+/* Hero area End here  */
+
+/* Discover section start here  */
+.discover-our-story, .global-headline{
+    margin-top:6rem;
+}
+.global-headline{
+    text-align: center;
+    margin-top:.6rem;
+}
+.global-headline h1{
+    color:gray;
+    margin-right:-.7rem;
+}
+.global-headline .fa-asterisk{
+    color:var(--main-font-color);
+    margin:.6rem 0;
+}
+.restaurant-info{
+    text-align: center;
+    line-height:1.6;
+    margin-bottom:.5rem;
+}
+.restaurant-description{
+    margin-bottom:5rem;
+}
+.body-btn{
+    color:var(--secondary-font-color);
+    font-size:1.7rem;
+    position:relative;
+    transition:0.3s all;
+    text-transform: uppercase;
+}
+.body-btn::before{
+    content: "";
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:var(--secondary-font-color);
+    left:0;
+    bottom:0;
+}
+/* Discover section end here  */
+/* Tastfull recipy section start here  */
+.tastful-recipes{
+    background:url(img/tasteful-recipes.jpg) center no-repeat;
+    background-size:cover;
+}
+.between{
+    height:60vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Tastfull recipy section end here  */
+
+/* Discover our menu section start here  */
+.image-group{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:1.5rem;
+}
+.discover-our-menu .restaurant-description{
+    padding-top:5rem;
+    margin-bottom:0;
+}
+/* Discover our menu section end here  */
+
+/* perfect blend section start here  */
+.perfect-blend{
+    background:url(img/perfect-blend.jpg) center no-repeat;
+    background-size:cover;
+}
+/* perfect blend section end here  */
+/* Footer section start here  */
+footer{
+    padding:4rem 0;
+    background:#121212;
+    text-align: center;
+    color:#fff;
+    position:relative;
+}
+.back-to-top{
+    position:absolute;
+    top:-3rem;
+    left:50%;
+    width:7rem;
+    height:7rem;
+    background:#121212;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: endup 2s infinite;
+}
+.back-to-top i{
+    color:white;
+    display: block;
+    padding:2rem;
+    font-size: 2rem;
+    animation: up 1s infinite;
+}
+.footer-content h4{
+    font-size:1.9rem;
+    text-transform: uppercase;
+    font-weight:100;
+    letter-spacing: 3px;
+    margin-bottom:3rem;
+}
+.footer-content .fa-asterisk{
+    margin:1rem 0;
+}
+.footer-content-about{
+    margin-bottom:2rem;
+}
+.footer-content-about p{
+    line-height: 2rem;
+}
+.social-icons{
+    list-style: none;
+    margin-bottom:3rem;
+    display: flex;
+    justify-content: center;
+}
+.social-icons i{
+    color:#fff;
+    padding:.8rem 2rem;
+    font-size:2rem;
+    opacity: .5;
+    transition: 0.3s all;
+}
+.social-icons i:hover,
+.social-icons i:focus{
+    color:var(--secondary-font-color);
+}
+.newsletter-form{
+    width:100%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+}
+.newsletter-form input{
+    width:100%;
+    max-width:25rem;
+    padding:.4rem;
+    border-radius:.4rem;
+    outline:none;
+    margin-top:.3rem;
+}
+.newsletter-content h4{
+    font-family: var(--main-font);
+    font-size: 1.4rem;
+    margin:0;
+    font-weight: 100;
+}
+.newsletter-btn{
+    background:transparent;
+    border:none;
+    font-size:1.8rem;
+    position:absolute;
+    top:28%;
+    left:50%;
+    transform: translateX(-50%);
+    margin-left:10.3rem;
+}
+.footer-content-divider h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:100;
+    font-family: var(--main-font);
+}
+/* Footer section end here  */
+
+@media(min-width:900px){
+    section{
+        padding:7.9rem;
+    }
+    .restaurant-info{
+        display:flex;
+        align-items:center;
+    }
+    .restaurant-info>div{
+        flex:1;
+    }
+    .padding-right{
+        padding-right:4rem;
+    }
+    .padding-left{
+        padding-left:4rem;
+    }
+    .footer-content-divider{
+        display:flex;
+        justify-content: space-evenly;
+    }
+    .footer-content{
+        max-width:77rem;
+        margin:0 auto;
+    }
+    .footer-content-about{
+        width:100%;
+        max-width:55rem;
+        margin:0 auto 6rem;
+    }
+    .social-menu .newsletter-content .form{
+        width:100%;
+        max-width:22rem;
+        margin:0 1rem;
+    }
+    .discover-our-story .restaurant-description{
+        margin-right:5rem;
+    }
+    
+}
+@media (max-width:899px){
+    .nav-list{
+        position:fixed;
+        top:0;
+        left:-35rem;
+        width:30rem;
+        background:var(--main-font-color);
+        flex-direction: column;
+        height:100vh;
+        justify-content: space-evenly;
+        transition:0.3s all;
+        box-shadow:0px 2px 5px white;
+    }
+    nav .menu-toggle .fa-bars{
+        display: block;
+    }
+    .nav-link:hover::before{
+        width:0;
+    }
+    .nav-link{
+        background:black;
+        padding:1rem;
+        border-radius:.4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Animation Setup start here  */
+@keyframes fadeUp{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+@keyframes scale{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+@keyframes grow{
+    0%{
+        width:0;
+    }
+    100%{
+        opacity:1;
+        width:100%;
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity:1;
+       transform: rotate(-300deg);
+    }
+}
+@keyframes fadeDown{
+    0%{
+        transform: translateY(-3rem);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+@keyframes up{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        transform: translateY(-1rem);
+    }
+}
+@keyframes endup{
+    0%{
+        
+       box-shadow:0 0 0 5px rgba(0,0,0,1);
+      
+        
+    }
+    50%{
+        
+        box-shadow:0 0 0 5px rgba(0,0,0,0.2);
+       
+    }
+    100%{
+         box-shadow:0 0 0 5px rgba(0,0,0,1);
+
+      
+    }
+}
+/* Animation Setup End Here  */
